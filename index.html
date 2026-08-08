@@ -343,6 +343,22 @@
       transform: rotate(160deg);
     }
 
+    /* FLORAL FRAME — added only; existing design rules remain untouched */
+    .cv-floral-frame{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+    .cv-floral-frame img{position:absolute;display:block;height:auto;max-width:none;pointer-events:none;user-select:none}
+    .cv-floral-tl{top:-28px;left:-28px;width:clamp(300px,38vw,560px)}
+    .cv-floral-tr{top:-28px;right:-28px;width:clamp(300px,38vw,560px)}
+    .cv-floral-bl{bottom:-28px;left:-28px;width:clamp(300px,38vw,560px)}
+    .cv-floral-br{bottom:-28px;right:-28px;width:clamp(300px,38vw,560px)}
+    @media(max-width:700px){
+      .cv-floral-tl,.cv-floral-tr{width:230px}
+      .cv-floral-bl,.cv-floral-br{width:230px}
+    }
+    @media(max-width:430px){
+      .cv-floral-tl,.cv-floral-tr{width:195px}
+      .cv-floral-bl,.cv-floral-br{width:195px}
+    }
+
     /* =========================================================
        WELCOME
        ========================================================= */
@@ -442,7 +458,7 @@
     .detail-time {
       margin-top: 12px;
       font-family: "Montserrat", sans-serif;
-      text-transform: uppercpase;
+      text-transform: uppercase; /* fixed typo */
       letter-spacing: .14em;
       font-size: 10px;
       font-weight: 700;
@@ -873,4 +889,801 @@
       }
 
       .attire-card {
-   
+        padding: 30px 22px;
+      }
+
+      .faq-question span {
+        font-size: 19px;
+        padding-right: 15px;
+      }
+
+      .faq-answer p {
+        font-size: 18px;
+      }
+
+      .story-layout { grid-template-columns:1fr; gap:45px; }
+      .story-layout .welcome-text { text-align:center; }
+      .story-layout .photo-frame { justify-self:center; max-width:360px; }
+      .story-copy p { font-size:19px; }
+      .guest-color-row { gap:14px; }
+      .music-button { right:12px; bottom:12px; }
+
+      .footer-names {
+        font-size: 48px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+       ======================================================= -->
+
+  <header class="navbar">
+    <nav class="nav-inner">
+
+      <a href="#home" class="monogram">
+        C & V
+      </a>
+
+      <div class="nav-links">
+        <a href="#details">Details</a>
+        <a href="#attire">Attire</a>
+        <a href="#rsvp">RSVP</a>
+        <a href="#faqs">FAQs</a>
+      </div>
+
+      <a href="#rsvp" class="nav-rsvp sans">
+        RSVP
+      </a>
+
+    </nav>
+  </header>
+
+
+  <main>
+
+    <!-- =====================================================
+         HERO / COVER
+         ===================================================== -->
+
+    <section id="home" class="hero">
+
+      <div class="leaf-decoration leaf-left">❧</div>
+      <div class="leaf-decoration leaf-right">❧</div>
+
+      <!-- Floral frame inserted here (decorative, aria-hidden) -->
+      <div class="cv-floral-frame" aria-hidden="true">
+        <img src="flowers/floral-top-left(1).png" class="cv-floral-tl" alt="">
+        <img src="flowers/floral-top-right(1).png" class="cv-floral-tr" alt="">
+        <img src="flowers/floral-bottom-left(1).png" class="cv-floral-bl" alt="">
+        <img src="flowers/floral-bottom-right(1).png" class="cv-floral-br" alt="">
+      </div>
+
+      <div class="hero-content reveal">
+
+        <p class="hero-label">
+          Together with their families
+        </p>
+
+        <div class="hero-ornament">
+          <span class="line"></span>
+          <span class="star">✦</span>
+          <span class="line"></span>
+        </div>
+
+        <h1 class="names">
+          Christine
+          <span class="amp">&</span>
+          Von
+        </h1>
+
+        <p class="getting-married">
+          We're Getting Married
+        </p>
+
+        <div class="hero-details">
+
+          <p class="hero-date">
+            November 14, 2026
+          </p>
+
+          <p class="hero-place">
+            National Shrine and Parish of Our Lady of Aranzazu
+          </p>
+
+          <p class="hero-time">
+            12:30 PM
+          </p>
+
+        </div>
+
+        <a href="#welcome" class="button">
+          Open Invitation
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         OUR STORY / COUPLE PHOTO
+         ===================================================== -->
+
+    <section id="welcome" class="section welcome">
+
+      <div class="container">
+
+        <div class="welcome-grid story-layout reveal">
+
+          <div class="welcome-text">
+            <p class="section-label">
+              Our Story
+            </p>
+
+            <h2>
+              It wasn't always easy, but it was always worth it.
+            </h2>
+
+            <div class="story-copy">
+              <p>If there's one thing our journey has taught us, it's that love isn't always about having a perfect story.</p>
+              <p>There were moments that challenged us, seasons that tested us, and times when we had to learn how to grow together instead of apart.</p>
+              <p>But along the way, we built something real.</p>
+              <p>A life filled with memories, laughter, lessons, and love. We've watched each other grow, faced life's challenges side by side, and continued choosing one another through it all.</p>
+              <p>And today, we look back at everything that brought us here with grateful hearts.</p>
+              <p>Because every chapter—the easy ones and the difficult ones—led us to this moment.</p>
+              <p class="story-closing">And we wouldn't change a thing.</p>
+              <p class="story-signature">Christine &amp; Von</p>
+            </div>
+
+          </div>
+
+          <div class="photo-frame">
+            <img
+              src="IMG_20251116_130030749_HDR.jpg"
+              alt="Christine and Von"
+              class="couple-photo"
+            >
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         WEDDING DETAILS
+         ===================================================== -->
+
+    <section id="details" class="section">
+
+      <div class="container">
+
+        <div class="center">
+
+          <p class="section-label">
+            The Celebration
+          </p>
+
+          <h2 class="section-title">
+            Wedding Details
+          </h2>
+
+        </div>
+
+
+        <div class="details-grid reveal">
+
+          <!-- CHURCH -->
+
+          <article class="detail-card">
+
+            <img
+              src="nuestra.jpg"
+              alt="National Shrine and Parish of Our Lady of Aranzazu"
+            >
+
+            <div class="detail-content">
+
+              <div class="detail-icon">
+                ♡
+              </div>
+
+              <h3>
+                Ceremony
+              </h3>
+
+              <p class="detail-place">
+                National Shrine and Parish of Our Lady of Aranzazu
+              </p>
+
+              <p class="detail-time">
+                12:30 PM
+              </p>
+
+              <p style="margin-top:8px;">
+                San Mateo, Rizal
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=National+Shrine+and+Parish+of+Our+Lady+of+Aranzazu+1850+Gen.+Luna+Ave+San+Mateo+Rizal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-link"
+              >
+                View Maps
+              </a>
+
+            </div>
+
+          </article>
+
+
+          <!-- RECEPTION -->
+
+          <article class="detail-card">
+
+            <img
+              src="alfredo.jpg"
+              alt="Alfredo's Place"
+            >
+
+            <div class="detail-content">
+
+              <div class="detail-icon">
+                ❦
+              </div>
+
+              <h3>
+                Reception
+              </h3>
+
+              <p class="detail-place">
+                Alfredo's Place
+              </p>
+
+              <p class="detail-time">
+                Immediately after the ceremony
+              </p>
+
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=P45P%2BXHJ+Alfredo%27s+Place+Maly-Maarang+Rd+Rodriguez+Rizal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="map-link"
+              >
+                View Maps
+              </a>
+
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         DRESS CODE
+         ===================================================== -->
+
+    <section id="attire" class="section attire-section">
+      <div class="container">
+
+        <div class="center">
+          <p class="section-label">Dress Code</p>
+          <h2 class="section-title">For the Celebration</h2>
+          <p class="attire-intro">We would love for everyone to complement our warm, elegant wedding palette.</p>
+        </div>
+
+        <div class="attire-group-title">Principal Sponsors</div>
+        <div class="attire-grid">
+          <div class="attire-card">
+            <h3>Ninongs</h3>
+            <div class="color-row"><span class="color" style="background:#E7D8C5;" title="Beige"></span></div>
+            <p>Beige Barong Tagalog</p>
+          </div>
+          <div class="attire-card">
+            <h3>Ninangs</h3>
+            <div class="color-row">
+              <span class="color" style="background:#EADCC6;" title="Champagne"></span>
+              <span class="color" style="background:#E7D8C5;" title="Beige"></span>
+            </div>
+            <p>Long formal gown or dress</p>
+          </div>
+        </div>
+
+        <div class="attire-group-title">Entourage</div>
+        <div class="attire-grid">
+          <div class="attire-card">
+            <h3>Bridesmaids</h3>
+            <div class="color-row"><span class="color" style="background:#B65A3A;" title="Rust / Burnt Orange"></span></div>
+            <p>Rust / Burnt Orange</p>
+          </div>
+          <div class="attire-card">
+            <h3>Groomsmen</h3>
+            <div class="color-row"><span class="color" style="background:#E7D8C5;" title="Beige"></span></div>
+            <p>Beige Tux</p>
+          </div>
+        </div>
+
+        <div class="attire-group-title">Guests</div>
+        <div class="guest-attire-card attire-card">
+          <p>We invite our guests to come in formal attire inspired by our warm and earthy wedding palette.</p>
+          <div class="guest-color-row">
+            <div><span class="color guest-color champagne"></span><small>Champagne</small></div>
+            <div><span class="color guest-color beige"></span><small>Beige</small></div>
+            <div><span class="color guest-color brown"></span><small>Brown</small></div>
+            <div><span class="color guest-color rust"></span><small>Rust</small></div>
+            <div><span class="color guest-color blush"></span><small>Blush Pink</small></div>
+            <div><span class="color guest-color sage"></span><small>Sage</small></div>
+          </div>
+          <p class="attire-note">Kindly avoid white, ivory, or colors that may closely resemble the bride's attire.</p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =====================================================
+         RSVP
+         ===================================================== -->
+
+    <section id="rsvp" class="section rsvp-section">
+
+      <div class="container">
+
+        <div class="rsvp-box reveal">
+
+          <div>
+
+            <p class="section-label">
+              Kindly Reply
+            </p>
+
+            <h2 class="rsvp-title">
+              Will you be joining us?
+            </h2>
+
+            <p class="rsvp-copy">
+              Please let us know if you can celebrate this beautiful day with us on or before October 14, 2026.
+            </p>
+
+            <div class="ornament">
+              ❦
+            </div>
+
+          </div>
+
+
+          <div class="rsvp-card">
+
+            <p>
+              We would be delighted to celebrate
+              with you.
+            </p>
+
+            <a
+              href="https://vontinxx.github.io/Rsvp/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="button"
+            >
+              Submit RSVP
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         GIFT GUIDE
+         ===================================================== -->
+
+    <section class="section">
+
+      <div class="container">
+
+        <div class="gift-box reveal">
+
+          <p class="section-label">
+            Gift Guide
+          </p>
+
+          <h2 class="gift-title">
+            A Little Note About Gifts
+          </h2>
+
+          <p class="gift-copy">
+
+            Your love, prayers, and presence on our
+            special day are the greatest gifts we could
+            ever ask for.
+
+            <br><br>
+
+            If you would like to bless us with a gift,
+            we would sincerely appreciate a
+            <strong>monetary gift</strong> as we begin
+            this new chapter together.
+
+            <br><br>
+
+            However, if you've chosen something special
+            for us instead, we'd be delighted to receive
+            your thoughtful surprise. Your kindness means
+            the world to us.
+
+          </p>
+
+          <div class="heart">
+            ♥
+          </div>
+
+          <p style="margin-top:8px; font-style:italic;">
+            Thank you for celebrating with us.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         FAQs
+         ===================================================== -->
+
+    <section id="faqs" class="section faq-section">
+
+      <div class="container">
+
+        <div class="center">
+
+          <p class="section-label">
+            Helpful Details
+          </p>
+
+          <h2 class="section-title">
+            Frequently Asked Questions
+          </h2>
+
+        </div>
+
+
+        <div class="faq-list reveal">
+
+
+          <!-- CHILDREN -->
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+
+              <span>
+                Can I bring my children?
+              </span>
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Absolutely! We love celebrating with
+                families, and your little ones are welcome
+                to join us.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- ADDITIONAL GUESTS -->
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+
+              <span>
+                Can I bring additional guests?
+              </span>
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Your invitation has a specific 
+                number of reserved seats. 
+                When you search your name in 
+                our RSVP, the number of seats 
+                reserved for you will be displayed. 
+                
+                Please RSVP only for the number 
+                of guests included in your reservation.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- DRESS CODE -->
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+
+              <span>
+                What should I wear?
+              </span>
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Please come dressed in our wedding color
+                palette. We kindly ask guests to avoid
+                wearing white, ivory, or colors that may
+                closely resemble the bride's attire.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- PARKING -->
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+
+              <span>
+                Where can I park?
+              </span>
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                Parking is available at the church and at
+                Alfredo's Place. Additional directions will
+                be provided closer to the wedding date if
+                needed.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- CONTACT -->
+
+          <div class="faq-item">
+
+            <button class="faq-question" type="button">
+
+              <span>
+                Who can I contact for questions?
+              </span>
+
+              <span class="faq-icon">
+                +
+              </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+              <p>
+                If you have any questions before the wedding, feel free to reach out to us through Facebook.
+              </p>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <p class="footer-thank">
+      Thank You
+    </p>
+
+    <p class="footer-small">
+      See you on
+    </p>
+
+    <p class="footer-date">
+      November 14, 2026
+    </p>
+
+    <p class="footer-names">
+      Christine & Von
+    </p>
+
+  </footer>
+
+
+  <!-- =======================================================
+       FAQ JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    document.querySelectorAll(".faq-question").forEach(function(button) {
+
+      button.addEventListener("click", function() {
+
+        const item = button.parentElement;
+        const answer = item.querySelector(".faq-answer");
+
+        /* Close other FAQ items */
+        document.querySelectorAll(".faq-item").forEach(function(otherItem) {
+
+          if (otherItem !== item) {
+
+            otherItem.classList.remove("open");
+
+            const otherAnswer =
+              otherItem.querySelector(".faq-answer");
+
+            otherAnswer.style.maxHeight = null;
+
+          }
+
+        });
+
+
+        /* Toggle selected FAQ */
+
+        item.classList.toggle("open");
+
+        if (item.classList.contains("open")) {
+
+          answer.style.maxHeight =
+            answer.scrollHeight + "px";
+
+        } else {
+
+          answer.style.maxHeight = null;
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+  <audio id="weddingMusic" loop preload="none">
+    <source src="./nahanap-kita.mp3" type="audio/mpeg">
+  </audio>
+
+  <button id="musicButton" class="music-button" type="button" aria-label="Play our song" aria-pressed="false">
+    ♫ Play Our Song
+  </button>
+
+  <script>
+    /* =======================================================
+       MUSIC PLAYER
+       ======================================================= */
+    const weddingMusic = document.getElementById("weddingMusic");
+    const musicButton = document.getElementById("musicButton");
+
+    function setMusicButtonPlaying(isPlaying) {
+      if (isPlaying) {
+        musicButton.textContent = "Ⅱ Pause Our Song";
+        musicButton.setAttribute("aria-label", "Pause our song");
+        musicButton.setAttribute("aria-pressed", "true");
+        musicButton.classList.add("playing");
+      } else {
+        musicButton.textContent = "♫ Play Our Song";
+        musicButton.setAttribute("aria-label", "Play our song");
+        musicButton.setAttribute("aria-pressed", "false");
+        musicButton.classList.remove("playing");
+      }
+    }
+
+    musicButton.addEventListener("click", function () {
+      if (weddingMusic.paused) {
+        weddingMusic.play()
+          .then(function () {
+            setMusicButtonPlaying(true);
+          })
+          .catch(function (error) {
+            console.error("Music could not be played:", error);
+            alert("The song could not be played. Please tap the button again.");
+          });
+      } else {
+        weddingMusic.pause();
+        setMusicButtonPlaying(false);
+      }
+    });
+
+    weddingMusic.addEventListener("play", function () {
+      setMusicButtonPlaying(true);
+    });
+
+    weddingMusic.addEventListener("pause", function () {
+      setMusicButtonPlaying(false);
+    });
+
+    weddingMusic.addEventListener("error", function () {
+      console.error("Unable to load nahanap-kita.mp3", weddingMusic.error);
+    });
+
+
+    /* =======================================================
+       SCROLL REVEAL
+       ======================================================= */
+    const revealElements = document.querySelectorAll(".reveal");
+
+  const revealObserver = new IntersectionObserver(
+    function(entries, observer) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.12
+    }
+  );
+
+  revealElements.forEach(function(element) {
+    revealObserver.observe(element);
+  });
+</script>
+
+</body>
+</html>
