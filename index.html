@@ -1,1 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Christine & Von — Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       COLOR PALETTE
+       ========================================================= */
+
+    :root {
+      --rust: #B65A3A;
+      --terracotta: #D47A5A;
+      --sage: #9A8F72;
+      --olive: #6F7056;
+      --taupe: #D6C3A5;
+      --beige: #E7D8C5;
+      --blush: #E8C9C5;
+      --champagne: #EADCC6;
+      --ivory: #F7F3EA;
+      --cream: #FBF8F2;
+      --brown: #5A4233;
+      --dark-brown: #493429;
+      --gold: #C49A52;
+      --white: #FFFFFF;
+    }
+
+    /* =========================================================
+       BASIC RESET
+       ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--ivory);
+      color: var(--brown);
+      font-family: "Cormorant Garamond", serif;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    /* =========================================================
+       FONTS
+       ========================================================= */
+
+    .script {
+      font-family: "Allura", cursive;
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", serif;
+    }
+
+    .sans {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    /* =========================================================
+       GENERAL
+       ========================================================= */
+
+    .section {
+      padding: 90px 20px;
+      position: relative;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--rust);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(42px, 7vw, 68px);
+      line-height: 0.95;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .ornament {
+      color: var(--rust);
+      font-size: 28px;
+      margin: 18px 0;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(247, 243, 234, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(182, 90, 58, 0.22);
+    }
+
+    .nav-inner {
+      max-width: 1100px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .monogram {
+      font-family: "Allura", cursive;
+      font-size: 38px;
+      color: var(--rust);
+      line-height: 1;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    .nav-links a:hover {
+      color: var(--rust);
+    }
+
+    .nav-rsvp {
+      border: 1px solid var(--rust);
+      border-radius: 30px;
+      padding: 10px 17px;
+      color: var(--rust) !important;
+    }
+
+    .nav-rsvp:hover {
+      background: var(--rust);
+      color: white !important;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(154,143,114,.13), transparent 25%),
+        radial-gradient(circle at 90% 85%, rgba(232,201,197,.18), transparent 25%),
+        var(--ivory);
+      padding: 80px 20px;
+    }
+
+    .hero-content {
+      text-align: center;
+      max-width: 850px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-label {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--rust);
+    }
+
+    .hero-ornament {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin: 25px 0 15px;
+    }
+
+    .hero-ornament span.line {
+      width: 55px;
+      height: 1px;
+      background: var(--rust);
+    }
+
+    .hero-ornament span.star {
+      color: var(--gold);
+      font-size: 20px;
+    }
+
+    .names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(72px, 14vw, 145px);
+      line-height: 0.75;
+      font-weight: 500;
+      color: var(--brown);
+    }
+
+    .names .amp {
+      font-family: "Allura", cursive;
+      font-size: 0.55em;
+      color: var(--rust);
+      display: block;
+      line-height: 0.9;
+      margin: 8px 0;
+    }
+
+    .getting-married {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.28em;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--rust);
+      margin-top: 30px;
+    }
+
+    .hero-details {
+      border-top: 1px solid rgba(196,154,82,.55);
+      border-bottom: 1px solid rgba(196,154,82,.55);
+      max-width: 500px;
+      margin: 30px auto 0;
+      padding: 20px 15px;
+    }
+
+    .hero-date {
+      font-size: 29px;
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .hero-place {
+      margin-top: 7px;
+      font-size: 21px;
+      color: var(--brown);
+    }
+
+    .hero-time {
+      margin-top: 8px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      color: var(--rust);
+    }
+
+    .button {
+      display: inline-block;
+      border: none;
+      background: var(--rust);
+      color: white;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      margin-top: 30px;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .button:hover {
+      background: var(--dark-brown);
+      transform: translateY(-2px);
+    }
+
+    /* =========================================================
+       BOTANICAL DECOR
+       ========================================================= */
+
+    .leaf-decoration {
+      position: absolute;
+      color: var(--sage);
+      opacity: .45;
+      pointer-events: none;
+      font-size: 100px;
+      line-height: 1;
+    }
+
+    .leaf-left {
+      left: -15px;
+      top: 50px;
+      transform: rotate(-20deg);
+    }
+
+    .leaf-right {
+      right: -15px;
+      bottom: 50px;
+      transform: rotate(160deg);
+    }
+
+    /* =========================================================
+       WELCOME
+       ========================================================= */
+
+    .welcome {
+      background: var(--beige);
+    }
+
+    .welcome-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .photo-frame {
+      position: relative;
+      padding: 12px;
+    }
+
+    .photo-frame::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--rust);
+      transform: translate(-10px, -10px);
+      pointer-events: none;
+    }
+
+    .couple-photo {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+      box-shadow: 0 15px 35px rgba(73,52,41,.14);
+    }
+
+    .welcome-text h2 {
+      font-size: clamp(42px, 6vw, 62px);
+      line-height: .95;
+      font-weight: 500;
+      margin-bottom: 22px;
+    }
+
+    .welcome-text p {
+      font-size: 21px;
+      line-height: 1.55;
+      color: var(--brown);
+    }
+
+    /* =========================================================
+       DETAILS
+       ========================================================= */
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .detail-card {
+      background: var(--cream);
+      border: 1px solid rgba(182,90,58,.25);
+      box-shadow: 0 15px 35px rgba(90,66,51,.08);
+      overflow: hidden;
+    }
+
+    .detail-card img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .detail-content {
+      padding: 30px 25px;
+      text-align: center;
+    }
+
+    .detail-icon {
+      font-size: 24px;
+      color: var(--rust);
+    }
+
+    .detail-content h3 {
+      font-size: 31px;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    .detail-place {
+      font-size: 22px;
+      margin-top: 8px;
+    }
+
+    .detail-time {
+      margin-top: 12px;
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercpase;
+      letter-spacing: .14em;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--rust);
+    }
+
+    .map-link {
+      display: inline-block;
+      margin-top: 18px;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--rust);
+      text-decoration: underline;
+    }
+
+    /* =========================================================
+       TIMELINE
+       ========================================================= */
+
+    .timeline-section {
+      background: var(--rust);
+      color: white;
+    }
+
+    .timeline-section .section-label {
+      color: var(--champagne);
+    }
+
+    .timeline-section .section-title {
+      color: white;
+    }
+
+    .timeline {
+      max-width: 620px;
+      margin: 55px auto 0;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 55px;
+      padding-bottom: 35px;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::after {
+      content: "";
+      position: absolute;
+      left: 12px;
+      top: 34px;
+      bottom: 0;
+      width: 1px;
+      background: rgba(234,220,198,.65);
+    }
+
+    .timeline-item:last-child::after {
+      display: none;
+    }
+
+    .timeline-number {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 26px;
+      height: 26px;
+      border: 1px solid var(--champagne);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+    }
+
+    .timeline-time {
+      font-family: "Montserrat", sans-serif;
+      font-size: 10px;
+      letter-spacing: .15em;
+      font-weight: 700;
+      color: var(--champagne);
+    }
+
+    .timeline-event {
+      font-size: 29px;
+      margin-top: 4px;
+    }
+
+    /* =========================================================
+       PRINCIPAL SPONSORS ATTIRE
+       ========================================================= */
+
+    .attire-section {
+      background: var(--ivory);
+    }
+
+    .attire-intro {
+      max-width: 700px;
+      margin: 15px auto 0;
+      text-align: center;
+      font-size: 20px;
+      line-height: 1.5;
+    }
+
+    .attire-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      margin-top: 50px;
+    }
+
+    .attire-card {
+      background: #F6EEE4;
+      border: 1px solid rgba(182,90,58,.25);
+      padding: 35px 30px;
+      text-align: center;
+    }
+
+    .attire-card h3 {
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    .attire-card p {
+      font-size: 19px;
+      line-height: 1.7;
+      margin-top: 20px;
+    }
+
+    .color-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .color {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      border: 1px solid rgba(90,66,51,.15);
+    }
+
+    .attire-note {
+      margin-top: 30px;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-size: 11px;
+      font-style: italic;
+      color: var(--brown);
+    }
+
+    /* =========================================================
+       RSVP
+       ========================================================= */
+
+    .rsvp-section {
+      background: var(--beige);
+    }
+
+    .rsvp-box {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .rsvp-title {
+      font-size: clamp(48px, 7vw, 70px);
+      line-height: .9;
+      font-weight: 500;
+    }
+
+    .rsvp-copy {
+      font-size: 21px;
+      line-height: 1.5;
+      margin-top: 20px;
+    }
+
+    .rsvp-card {
+      background: var(--cream);
+      border: 1px solid rgba(182,90,58,.2);
+      padding: 50px 35px;
+      text-align: center;
+      box-shadow: 0 15px 35px rgba(90,66,51,.07);
+    }
+
+    .rsvp-card p {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* =========================================================
+       GIFT GUIDE
+       ========================================================= */
+
+    .gift-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 60px 30px;
+      text-align: center;
+      border-top: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .gift-title {
+      font-size: clamp(40px, 6vw, 58px);
+      line-height: .95;
+      font-weight: 500;
+    }
+
+    .gift-copy {
+      max-width: 700px;
+      margin: 25px auto 0;
+      font-size: 20px;
+      line-height: 1.6;
+    }
+
+    .heart {
+      color: var(--rust);
+      font-size: 25px;
+      margin-top: 25px;
+    }
+
+    /* =========================================================
+       FAQ
+       ========================================================= */
+
+    .faq-section {
+      background: #F1E7DA;
+    }
+
+    .faq-list {
+      max-width: 850px;
+      margin: 45px auto 0;
+      border-top: 1px solid rgba(182,90,58,.35);
+      border-bottom: 1px solid rgba(182,90,58,.35);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(182,90,58,.25);
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      cursor: pointer;
+      color: var(--brown);
+    }
+
+    .faq-question span {
+      font-size: 21px;
+      font-weight: 600;
+    }
+
+    .faq-icon {
+      font-family: "Montserrat", sans-serif;
+      font-size: 22px;
+      color: var(--rust);
+      transition: transform .25s ease;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+    }
+
+    .faq-answer p {
+      padding: 0 40px 22px 5px;
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      background: var(--brown);
+      color: white;
+      text-align: center;
+      padding: 75px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-thank {
+      font-family: "Allura", cursive;
+      color: var(--champagne);
+      font-size: 62px;
+    }
+
+    .footer-small {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 10px;
+      font-weight: 700;
+      margin-top: 18px;
+    }
+
+    .footer-date {
+      font-size: 30px;
+      margin-top: 8px;
+    }
+
+    .footer-names {
+      font-family: "Allura", cursive;
+      color: var(--champagne);
+      font-size: 58px;
+      margin-top: 20px;
+    }
+
+
+    /* =========================================================
+       FINAL STORY / DRESS CODE / MUSIC / TRANSITIONS
+       ========================================================= */
+    .story-layout {
+      grid-template-columns: 1.25fr .75fr;
+      gap: 65px;
+    }
+    .story-layout .welcome-text { text-align: left; }
+    .story-layout .photo-frame { max-width: 430px; width: 100%; justify-self: end; }
+    .story-copy p { font-size: 20px; line-height: 1.65; margin-top: 18px; }
+    .story-copy .story-closing { font-size: 24px; font-weight: 600; color: var(--rust); margin-top: 28px; }
+    .story-copy .story-signature { font-family: "Allura", cursive; font-size: 42px; color: var(--rust); margin-top: 10px; }
+    .attire-group-title { text-align:center; font-family:"Cormorant Garamond",serif; font-size:32px; font-weight:600; margin:55px 0 25px; color:var(--brown); }
+    .guest-attire-card { max-width:1000px; margin:0 auto; }
+    .guest-color-row { display:flex; justify-content:center; align-items:flex-start; gap:22px; flex-wrap:wrap; margin-top:28px; }
+    .guest-color-row > div { display:flex; flex-direction:column; align-items:center; gap:8px; min-width:70px; }
+    .guest-color-row small { font-family:"Montserrat",sans-serif; font-size:9px; letter-spacing:.08em; text-transform:uppercase; }
+    .guest-color { width:44px; height:44px; display:inline-block; }
+    .guest-color.champagne { background:#EADCC6; }
+    .guest-color.beige { background:#E7D8C5; }
+    .guest-color.brown { background:#8B6F56; }
+    .guest-color.rust { background:#B65A3A; }
+    .guest-color.blush { background:#E8C9C5; }
+    .guest-color.sage { background:#9A8F72; }
+    .music-button { position:fixed; right:18px; bottom:18px; z-index:1200; border:1px solid var(--rust); background:rgba(247,243,234,.95); color:var(--brown); border-radius:30px; padding:12px 17px; font-family:"Montserrat",sans-serif; font-size:9px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; box-shadow:0 8px 20px rgba(90,66,51,.12); transition:background 1s ease,color 1s ease,transform 1s ease; }
+    .music-button:hover { background:var(--rust); color:white; transform:translateY(-2px); }
+    .reveal { opacity:0; transform:translateY(24px); transition:opacity 2.4s ease, transform 2.4s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    @media (prefers-reduced-motion: reduce) { .reveal { opacity:1; transform:none; transition:none; } }
+
+    /* =========================================================
+       MOBILE
+       ========================================================= */
+
+    @media (max-width: 768px) {
+
+      .section {
+        padding: 70px 18px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-inner {
+        padding: 13px 16px;
+      }
+
+      .monogram {
+        font-size: 34px;
+      }
+
+      .hero {
+        min-height: 88vh;
+        padding: 65px 18px;
+      }
+
+      .hero-place {
+        font-size: 18px;
+      }
+
+      .hero-date {
+        font-size: 25px;
+      }
+
+      .welcome-grid,
+      .details-grid,
+      .attire-grid,
+      .rsvp-box {
+        grid-template-columns: 1fr;
+      }
+
+      .welcome-grid {
+        gap: 50px;
+      }
+
+      .welcome-text {
+        text-align: center;
+      }
+
+      .detail-card img {
+        height: 250px;
+      }
+
+      .rsvp-box {
+        gap: 40px;
+      }
+
+      .rsvp-card {
+        padding: 40px 22px;
+      }
+
+      .timeline {
+        margin-top: 40px;
+      }
+
+      .attire-card {
+   
