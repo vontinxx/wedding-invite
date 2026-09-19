@@ -6,23 +6,6 @@
 
   <title>Christine & Von — Wedding Invitation</title>
 
-  <!-- Facebook / Messenger Link Preview -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://vontinxx.github.io/wedding-invite/">
-  <meta property="og:title" content="Christine & Von — Wedding Invitation">
-  <meta property="og:description" content="Together with their families, Christine & Von invite you to celebrate their wedding on November 14, 2026.">
-  <meta property="og:image" content="https://vontinxx.github.io/wedding-invite/christine-von-facebook-preview.jpg">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/jpeg">
-  <meta property="og:image:alt" content="Christine and Von — Wedding Invitation">
-
-  <!-- Other social media -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Christine & Von — Wedding Invitation">
-  <meta name="twitter:description" content="November 14, 2026">
-  <meta name="twitter:image" content="https://vontinxx.github.io/wedding-invite/christine-von-facebook-preview.jpg">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -568,6 +551,219 @@
       margin-top: 4px;
     }
 
+
+    /* =========================================================
+       WEDDING ENTOURAGE — reference-inspired editorial layout
+       ========================================================= */
+
+    .entourage-section {
+      background: var(--ivory);
+      overflow: hidden;
+    }
+
+    .entourage-wrap {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px 35px 30px;
+    }
+
+    .entourage-frame {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+      opacity: .9;
+    }
+
+    .entourage-frame img {
+      position: absolute;
+      width: 210px;
+      max-width: 25vw;
+      height: auto;
+    }
+
+    .entourage-frame .tl { top: -35px; left: -55px; }
+    .entourage-frame .tr { top: -35px; right: -55px; }
+    .entourage-frame .bl { bottom: -35px; left: -55px; }
+    .entourage-frame .br { bottom: -35px; right: -55px; }
+
+    .entourage-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .entourage-kicker {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--rust);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .entourage-title {
+      font-family: "Allura", cursive;
+      font-size: clamp(52px, 8vw, 78px);
+      line-height: .9;
+      font-weight: 400;
+      color: var(--rust);
+      text-align: center;
+    }
+
+    .entourage-subtitle {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: 10px;
+      color: var(--brown);
+      text-align: center;
+      margin: 17px auto 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+    }
+
+    .entourage-subtitle::before,
+    .entourage-subtitle::after {
+      content: "";
+      width: 85px;
+      height: 1px;
+      background: rgba(182,90,58,.5);
+    }
+
+    .entourage-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 70px;
+      row-gap: 34px;
+      text-align: center;
+    }
+
+    .entourage-group h3,
+    .secondary-role h3 {
+      font-family: "Allura", cursive;
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 400;
+      color: var(--rust);
+      margin-bottom: 10px;
+    }
+
+    .entourage-names {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 21px;
+      line-height: 1.22;
+      font-weight: 600;
+      color: var(--brown);
+    }
+
+    .entourage-divider {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 42px 0 30px;
+      color: var(--rust);
+    }
+
+    .entourage-divider::before,
+    .entourage-divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: rgba(182,90,58,.45);
+    }
+
+    .entourage-divider span {
+      font-family: "Allura", cursive;
+      font-size: clamp(40px, 6vw, 54px);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .sponsor-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      text-align: center;
+    }
+
+    .sponsor-label {
+      font-family: "Montserrat", sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .24em;
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--rust);
+      margin-bottom: 7px;
+    }
+
+    .secondary-role-list {
+      max-width: 760px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .secondary-role {
+      margin-bottom: 27px;
+    }
+
+    .secondary-role h3 {
+      font-family: "Allura", cursive;
+      font-size: 36px;
+      line-height: 1;
+      font-weight: 400;
+      color: var(--rust);
+      margin-bottom: 10px;
+    }
+
+    .secondary-role .entourage-names {
+      font-size: 20px;
+    }
+
+    .secondary-role .entourage-names .dot {
+      color: var(--rust);
+      padding: 0 8px;
+    }
+
+    @media (max-width: 768px) {
+      .entourage-wrap { padding: 15px 20px 25px; }
+      .entourage-frame img { width: 145px; max-width: none; }
+      .entourage-frame .tl { top: -20px; left: -35px; }
+      .entourage-frame .tr { top: -20px; right: -35px; }
+      .entourage-frame .bl { bottom: -20px; left: -35px; }
+      .entourage-frame .br { bottom: -20px; right: -35px; }
+      .entourage-subtitle { margin-bottom: 35px; }
+      .entourage-subtitle::before,
+      .entourage-subtitle::after { width: 35px; }
+      .entourage-main-grid { column-gap: 25px; row-gap: 30px; }
+      .entourage-group h3,
+      .secondary-role h3 { font-size: 31px; }
+      .entourage-names { font-size: 19px; }
+      .sponsor-pair { gap: 20px; }
+    }
+
+    @media (max-width: 500px) {
+      .entourage-wrap { padding-left: 12px; padding-right: 12px; }
+      .entourage-frame img { width: 105px; }
+      .entourage-frame .tl { left: -25px; }
+      .entourage-frame .tr { right: -25px; }
+      .entourage-frame .bl { left: -25px; }
+      .entourage-frame .br { right: -25px; }
+      .entourage-main-grid { grid-template-columns: 1fr 1fr; column-gap: 12px; }
+      .entourage-group h3 { font-size: 28px; }
+      .entourage-names { font-size: 17px; }
+      .sponsor-pair { gap: 10px; }
+      .sponsor-label { font-size: 8px; letter-spacing: .18em; }
+      .secondary-role .entourage-names { font-size: 18px; }
+      .entourage-subtitle { gap: 8px; font-size: 8px; }
+      .entourage-subtitle::before,
+      .entourage-subtitle::after { width: 22px; }
+    }
+
     /* =========================================================
        PRINCIPAL SPONSORS ATTIRE
        ========================================================= */
@@ -947,6 +1143,7 @@
 
       <div class="nav-links">
         <a href="#details">Details</a>
+        <a href="#entourage">Entourage</a>
         <a href="#attire">Attire</a>
         <a href="#rsvp">RSVP</a>
         <a href="#faqs">FAQs</a>
@@ -1060,7 +1257,7 @@
 
           <div class="photo-frame">
             <img
-              src="DSC01720 (1).JPG"
+              src="DSC01713 (1).JPG"
               alt="Christine and Von"
               class="couple-photo"
             >
@@ -1120,7 +1317,7 @@
               </p>
 
               <p class="detail-time">
-                12:00 PM
+                12:30 PM
               </p>
 
               <p style="margin-top:8px;">
@@ -1189,6 +1386,108 @@
 
 
     <!-- =====================================================
+         OUR ENTOURAGE
+         ===================================================== -->
+
+    <section id="entourage" class="section entourage-section">
+      <div class="entourage-wrap">
+
+        <div class="entourage-frame" aria-hidden="true">
+          <img src="flowers/floral-top-left(1).png" class="tl" alt="">
+          <img src="flowers/floral-top-right(1).png" class="tr" alt="">
+          <img src="flowers/floral-bottom-left(1).png" class="bl" alt="">
+          <img src="flowers/floral-bottom-right(1).png" class="br" alt="">
+        </div>
+
+        <div class="entourage-content reveal">
+          <p class="entourage-kicker">Christine &amp; Von</p>
+          <h2 class="entourage-title">Wedding Entourage</h2>
+          <div class="entourage-subtitle">With our families and loved ones</div>
+
+          <div class="entourage-main-grid">
+            <div class="entourage-group">
+              <h3>Parents of the Groom</h3>
+              <div class="entourage-names">Mr. Alexander Torralba<br>Mrs. Myrna C. Torralba</div>
+            </div>
+
+            <div class="entourage-group">
+              <h3>Parents of the Bride</h3>
+              <div class="entourage-names">Mr. Crispin C. Borganio<br>Mrs. Marivic B. Borganio</div>
+            </div>
+
+            <div class="entourage-group">
+              <h3>Best Man</h3>
+              <div class="entourage-names">Dahrell</div>
+            </div>
+
+            <div class="entourage-group">
+              <h3>Maid of Honor</h3>
+              <div class="entourage-names">Sofia Channel Cortez</div>
+            </div>
+
+            <div class="entourage-group">
+              <h3>Groomsmen</h3>
+              <div class="entourage-names">Borgy Borganio<br>Ryan Benipayo</div>
+            </div>
+
+            <div class="entourage-group">
+              <h3>Bridesmaids</h3>
+              <div class="entourage-names">Shelevi Aziel Y. Salicio<br>Percious Azriel Acosta</div>
+            </div>
+          </div>
+
+          <div class="entourage-divider"><span>Secondary Sponsors</span></div>
+
+          <div class="sponsor-pair">
+            <div>
+              <div class="sponsor-label">Female</div>
+              <div class="entourage-names">Mrs. Geraldine Laurente</div>
+            </div>
+            <div>
+              <div class="sponsor-label">Male</div>
+              <div class="entourage-names">Mr. Rolen Espiritu</div>
+            </div>
+          </div>
+
+          <div class="entourage-divider"><span>Secondary Sponsors</span></div>
+
+          <div class="secondary-role-list">
+            <div class="secondary-role">
+              <h3>To Light Our Path</h3>
+              <div class="entourage-names">Connie Benipayo <span class="dot">•</span> Edrian Kier Benipayo</div>
+            </div>
+
+            <div class="secondary-role">
+              <h3>To Clothe Us as One</h3>
+              <div class="entourage-names">Mae Edrilyn Benipayo-Escala <span class="dot">•</span> Jomark Escala</div>
+            </div>
+
+            <div class="secondary-role">
+              <h3>To Bind Us Together</h3>
+              <div class="entourage-names">Michelle <span class="dot">•</span> Charlie</div>
+            </div>
+
+            <div class="secondary-role">
+              <h3>To Carry Our Symbol of Love</h3>
+              <div class="entourage-names">Crisxander Theo Torralba</div>
+            </div>
+
+            <div class="secondary-role">
+              <h3>To Carry Our Symbol of Treasures</h3>
+              <div class="entourage-names">Miles Jillian Benipayo</div>
+            </div>
+
+            <div class="secondary-role">
+              <h3>To Carry Our Symbol of Faith</h3>
+              <div class="entourage-names">Kris Paula Benipayo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================================================
          DRESS CODE
          ===================================================== -->
 
@@ -1206,7 +1505,7 @@
           <div class="attire-card">
             <h3>Ninongs</h3>
             <div class="color-row"><span class="color" style="background:#E7D8C5;" title="Beige"></span></div>
-            <p>Beige Barong Tagalog & Black Pants</p>
+            <p>Beige Barong Tagalog</p>
           </div>
           <div class="attire-card">
             <h3>Ninangs</h3>
@@ -1215,6 +1514,20 @@
               <span class="color" style="background:#E7D8C5;" title="Beige"></span>
             </div>
             <p>Long formal gown or dress</p>
+          </div>
+        </div>
+
+        <div class="attire-group-title">Entourage</div>
+        <div class="attire-grid">
+          <div class="attire-card">
+            <h3>Bridesmaids</h3>
+            <div class="color-row"><span class="color" style="background:#B65A3A;" title="Rust / Burnt Orange"></span></div>
+            <p>Rust / Burnt Orange</p>
+          </div>
+          <div class="attire-card">
+            <h3>Groomsmen</h3>
+            <div class="color-row"><span class="color" style="background:#E7D8C5;" title="Beige"></span></div>
+            <p>Beige Tux</p>
           </div>
         </div>
 
@@ -1257,11 +1570,11 @@
             </h2>
 
             <p class="rsvp-copy">
-              Please let us know if you can celebrate this beautiful day with us on or before <strong><u>October 18, 2026</u></strong>.
+              Please let us know if you can celebrate this beautiful day with us on or before October 14, 2026.
             </p>
 
             <div class="ornament">
-              ✒️
+              ❦
             </div>
 
           </div>
